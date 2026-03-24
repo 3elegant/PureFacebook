@@ -1,0 +1,11 @@
+{
+  "new_version_code": 1,
+  "new_version_name": "1.0",
+  "update_url": "https://github.com/3elegant/PureFacebook/releases/latest",
+  "force_update": false,
+  "features": [
+    "ইন-অ্যাপ আপডেট সিস্টেম যুক্ত করা হয়েছে।",
+    "নতুন ওয়ার্নিং মেসেজ যোগ করা হয়েছে।",
+    "অ্যাপের পারফরম্যান্স উন্নত করা হয়েছে।"
+  ]
+}

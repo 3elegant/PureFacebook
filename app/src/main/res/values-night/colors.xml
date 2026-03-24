@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#4C9BFF</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#1E293B</color>
+    <color name="onPrimaryContainer">#D1E5FF</color>
+
+    <color name="secondary">#94A3B8</color>
+    <color name="onSecondary">#0F172A</color>
+    <color name="secondaryText">#94A3B8</color>
+
+    <color name="background">#0A1220</color>
+    <color name="surface">#111A2C</color>
+    <color name="surfaceVariant">#1E293B</color>
+    <color name="onSurface">#E2E8F0</color>
+
+    <color name="error">#FF5252</color>
+    <color name="onError">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="timer_bg">#CC0A1220</color> </resources>
