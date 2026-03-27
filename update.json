@@ -4,10 +4,9 @@
   "update_url": "https://github.com/3elegant/PureFacebook/releases/latest",
   "force_update": false,
   "features": [
-    "সিকিউরিটি কী পরিবর্তনের কারণে আপনার ব্যবহৃত বর্তমান অ্যাপটি আনইনস্টল করে, এই নতুন ভার্সনটি ইনস্টল করুন।",
-    "ফেসবুক লগইন সমস্যা সমাধান করা হয়েছে।",
-    "পাসওয়ার্ড এবং লগইন পেইজে নিরাপত্তা বাড়ানো হয়েছে।",
-    "VPN এবং Ethernet কানেকশনেও অ্যাপটি চলবে।",
-    "প্রসেসর এবং ব্যাটারি সাশ্রয়ের জন্য স্ক্রিপ্ট লোডিং টাইম অপ্টিমাইজ করা হয়েছে।"
+    "Important Notice: Browser system updated to accurately recognize your specific device. Facebook will now show your actual phone model in login alerts.",
+    "Text Copy Enabled: You can now select and copy text from any post, including those with colored backgrounds.",
+    "Real Device Name: Fixed login history issues; your account will no longer show unknown or generic device names.",
+    "Better Browsing: Removed WebView restrictions for a smoother and more modern browsing experience."
   ]
 }
