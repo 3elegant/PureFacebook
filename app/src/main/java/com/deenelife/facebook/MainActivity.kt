@@ -144,7 +144,8 @@ class MainActivity : AppCompatActivity() {
             allowFileAccess = true
             allowContentAccess = true
 
-            userAgentString = "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36"
+            val defaultUserAgent = userAgentString
+            userAgentString = defaultUserAgent.replace("; wv", "").replace("Version/4.0 ", "")
         }
 
         CookieManager.getInstance().setAcceptCookie(true)
@@ -491,13 +492,32 @@ class MainActivity : AppCompatActivity() {
                                 document.head.appendChild(lStyle);
                             }
 
+                            var enableSelectionStyleId = 'fb-enable-selection-style';
+                            if (!document.getElementById(enableSelectionStyleId)) {
+                                var eStyle = document.createElement('style');
+                                eStyle.id = enableSelectionStyleId;
+                                eStyle.innerHTML = `
+                                    body, div, span, p, a, h1, h2, h3, h4, h5, h6, 
+                                    [data-long-click-action-id], ._52jc, ._5jmm, .story_body_container, 
+                                    .native-text, [data-mcomponent="TextArea"], [data-mcomponent="MContainer"], 
+                                    [data-focusable="true"], .m, .f4, .rslh {
+                                        -webkit-user-select: text !important;
+                                        user-select: text !important;
+                                        -webkit-touch-callout: default !important;
+                                    }
+                                    .native-text, .native-text span, [data-mcomponent="TextArea"] div {
+                                        pointer-events: auto !important;
+                                    }
+                                `;
+                                document.head.appendChild(eStyle);
+                            }
+
                             var calloutStyleId = 'fb-callout-style';
                             if (!document.getElementById(calloutStyleId)) {
                                 var cStyle = document.createElement('style');
                                 cStyle.id = calloutStyleId;
                                 cStyle.innerHTML = `
                                     div[role="button"], 
-                                    [data-long-click-action-id], 
                                     [aria-label*="reaction"], 
                                     [aria-label*="Like"], 
                                     [aria-label*="লাইক"] { 
@@ -682,7 +702,7 @@ class MainActivity : AppCompatActivity() {
         webView.visibility = View.GONE
         cvCountdown.visibility = View.GONE
         blockLayout.visibility = View.VISIBLE
-        tvBlockMessage.text = "'Surely the wasteful are ˹like˺ brothers to the devils (নিশ্চয় অপব্যয়কারীরা শয়তানের ভাই)' (Al Quran 17:27)\n\nPlease focus on productive work!"
+        tvBlockMessage.text = "'Surely the wasteful are ˹like˺ brothers to the devils (নিশ্চয় অপব্যয়কারীরা শয়তানের ভাই)' (Al Quran 17:27)\n\nPlease focus on productive work!"
         timerHandler.removeCallbacksAndMessages(null)
         warningHandler.removeCallbacksAndMessages(null)
     }
